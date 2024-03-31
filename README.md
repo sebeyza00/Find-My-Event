@@ -3,10 +3,10 @@
 
 
 <h3>How it was done</h3>
-<p>Utilized SeatGeek's API to get info for events</p>\
-<p> API uses user location to find events near them </p>
+<p>Utilized SeatGeek's API to get info for events</p>
+<p>API uses user location to find events near them </p>
 <p>Utilized async function to call API and useEffect to call async function</p>
 <p>Utilized useState to create variables that hold info for filters and and widgets at top of table</p>
 <p>Utilized other functions to aid in better visualizing data on table in website</p>
 <p>Utilized CSS for better visualization, especially table data</p>
-<p></p>
+<p>GIF URL: https://imgur.com/gallery/NSrTg6g</p>
