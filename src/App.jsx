@@ -3,7 +3,8 @@ import './App.css'
 import axios from 'axios'; // For Axios
 
 function App() {
-
+  const clientId = import.meta.env.VITE_SEATGEEK_CLIENT_ID;
+  const clientSecret = import.meta.env.VITE_SEATGEEK_CLIENT_SECRET;
   const [events, setEvents] = useState([]);
   const [meta, setMeta] = useState({ geolocation: { city: "Unknown" } });
   const [mostPopularEvent, setMostPopularEvent] = useState("");
@@ -28,7 +29,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetchPage('https://api.seatgeek.com/2/events?client_id=MzMzMTU2NDZ8MTcxMTYzMDA3MS4zNjU5NDQ2&client_secret=adacb9814a1c11e024aca9d5292132c1904030d555276c0ba72cffa4b4494a1e&geoip=true&per_page=30');
+    fetchPage(`https://api.seatgeek.com/2/events?client_id=${clientId}&client_secret=${clientSecret}&geoip=true&per_page=30`);
   }, []);
 
   function formatDateTime(datetime) {
